@@ -58,7 +58,7 @@ class Nachos extends Starters{
 }
 
 // Main method to print Calamari and Nachos classes
-class Main {
+class MainStarter {
     public static void main(String[] args) {
         Starters calamari = new Starters("Calamari", "Squid", "Shellfish", 9.50);
         calamari.getStarter();
