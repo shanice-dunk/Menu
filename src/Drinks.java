@@ -16,7 +16,7 @@ public class Drinks {
         // Array list of drinks 
         String arr[] = {"Prosecco", "White Wine", "Red Wine", "Rosé", "Beer", "Cider", "Spirits", "Non-alcoholic"};
         // Search for drink
-        String target = "White Wine";
+        String target = "Orange Juice";
         linearSearch(arr, target);
     }
 
