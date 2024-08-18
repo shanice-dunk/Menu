@@ -18,7 +18,7 @@ public class Drinks {
         String target = "Beer";
         // Do the linear search
         boolean available = linearSearch(drinksList, target);
-
+        // Checks whether drink was found prints message
         if (available) {
             System.out.println(target + " is available.");
         } else {
@@ -27,9 +27,10 @@ public class Drinks {
 
     }
 
-    // Linear search method
+    // Linear search method iterating through each element in the LinkedList
     public static boolean linearSearch(LinkedList<String> list, String target) {
         for (String drink: list) {
+            // Compare each element with the target drink
             if (drink.equals(target)) {
                 return true; // Drink found
             }
