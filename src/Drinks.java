@@ -1,23 +1,40 @@
+import java.util.LinkedList;
+
 public class Drinks {
-    public static int linearSearch(String[] arr, String target) {
-        // loop through list to find the drink in the array
-        for (int i = 0; i < arr.length; i ++) {
-            if (arr[i].equals(target)) {
-                System.out.println("This drink is available.");
-                return i;
-            }
+    public static void main(String[] args) {
+        // LinkedList created
+        LinkedList<String> drinksList = new LinkedList<>();
+        // Adding elements to the LinkedList
+        drinksList.add("Prosecco");
+        drinksList.add("White Wine");
+        drinksList.add("Red Wine");
+        drinksList.add("Rosé");
+        drinksList.add("Beer");
+        drinksList.add("Cider");
+        drinksList.add("Spirits");
+        drinksList.add("Non-alcoholic");
+
+        // Target drink to search for
+        String target = "Beer";
+        // Do the linear search
+        boolean available = linearSearch(drinksList, target);
+
+        if (available) {
+            System.out.println(target + " is available.");
+        } else {
+            System.out.println(target + " it not available.");
         }
-        // Print statement if drink is not available
-            System.out.println("This drink is not available.");
-            return -1;
+
     }
 
-    public static void main(String[] args) {
-        // Array list of drinks 
-        String arr[] = {"Prosecco", "White Wine", "Red Wine", "Rosé", "Beer", "Cider", "Spirits", "Non-alcoholic"};
-        // Search for drink
-        String target = "Orange Juice";
-        linearSearch(arr, target);
+    // Linear search method
+    public static boolean linearSearch(LinkedList<String> list, String target) {
+        for (String drink: list) {
+            if (drink.equals(target)) {
+                return true; // Drink found
+            }
+        }
+        return false; // Drink not found
     }
 
 }
